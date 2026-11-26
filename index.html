@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff5a2a" />
+    <meta name="description" content="Foodie Hub — order from six world cuisines, manage drafts, track partners and pay securely." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <link rel="stylesheet" href="./src/css/layout.css" />
+    <link rel="stylesheet" href="./src/css/components.css" />
+    <link rel="stylesheet" href="./src/css/features.css" />
+    <link rel="stylesheet" href="./src/css/sweet-corner.css" />
+    <title>Foodie Hub — Six cuisines, one beautiful order</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to menu</a>
+
+    <div class="app-shell" id="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#discover" data-nav="discover" aria-label="Foodie Hub home">
+          <img src="./assets/logo.svg" alt="" />
+          <span><strong>foodie</strong><em>hub</em></span>
+        </a>
+
+        <nav class="side-nav">
+          <p class="nav-label">Workspace</p>
+          <button class="nav-item active" data-nav="discover">
+            <span class="nav-icon" data-icon="compass"></span><span>Discover</span>
+          </button>
+          <button class="nav-item" data-nav="drafts">
+            <span class="nav-icon" data-icon="bookmark"></span><span>My drafts</span>
+            <span class="nav-badge" id="draft-nav-count">0</span>
+          </button>
+          <button class="nav-item" data-nav="orders">
+            <span class="nav-icon" data-icon="receipt"></span><span>Orders</span>
+            <span class="nav-badge accent" id="order-nav-count">0</span>
+          </button>
+          <button class="nav-item" data-nav="offers">
+            <span class="nav-icon" data-icon="sparkles"></span><span>Offers</span>
+          </button>
+          <button class="nav-item" data-nav="sweet-corner">
+            <span class="nav-icon" data-icon="gift"></span><span>Sweet Corner</span>
+          </button>
+
+          <p class="nav-label nav-label-spaced">Operations</p>
+          <button class="nav-item" data-nav="manager">
+            <span class="nav-icon" data-icon="dashboard"></span><span>Manager board</span>
+          </button>
+          <button class="nav-item" data-nav="safety">
+            <span class="nav-icon" data-icon="shield"></span><span>Safety & policy</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+        <div class="service-card">
+          <div class="service-card-top">
+            <span class="pulse-dot"></span>
+            <strong>All kitchens live</strong>
+          </div>
+          <p>Average partner response under 4 minutes.</p>
+          <div class="mini-avatars" aria-label="Available partner chefs">
+            <span>AK</span><span>RM</span><span>VS</span><span>+9</span>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="avatar">AS</div>
+          <div><strong>Arjun Sharma</strong><span>Table 12 · Dine in</span></div>
+          <button class="icon-button" aria-label="Profile options" data-action="profile-menu"><span data-icon="more"></span></button>
+        </div>
+      </aside>
+
+      <div class="app-main">
+        <header class="topbar">
+          <button class="icon-button menu-toggle" aria-label="Open menu" data-action="toggle-sidebar"><span data-icon="menu"></span></button>
+          <a class="mobile-brand" href="#discover" data-nav="discover">
+            <img src="./assets/logo.svg" alt="" /><strong>foodie<span>hub</span></strong>
+          </a>
+          <label class="global-search">
+            <span data-icon="search"></span>
+            <input id="global-search" type="search" placeholder="Search 900+ dishes, cuisines or tastes…" autocomplete="off" />
+            <kbd>⌘ K</kbd>
+          </label>
+          <div class="topbar-actions">
+            <button class="location-button" data-action="location">
+              <span class="location-pin" data-icon="pin"></span>
+              <span><small>Delivering to</small><strong id="location-label">Koramangala</strong></span>
+              <span data-icon="chevron-down"></span>
+            </button>
+            <button class="icon-button notification-button" aria-label="Notifications" data-action="notifications">
+              <span data-icon="bell"></span><span class="notification-dot"></span>
+            </button>
+            <button class="avatar avatar-button" aria-label="Open profile">AS</button>
+          </div>
+        </header>
+
+        <main id="main-content" class="main-content">
+          <section class="app-view active" id="view-discover" data-view="discover" aria-labelledby="discover-title">
+            <div class="welcome-row">
+              <div>
+                <p class="eyebrow"><span class="pulse-dot"></span> Six kitchens. One table.</p>
+                <h1 id="discover-title">What are you craving today?</h1>
+                <p class="page-subtitle">Build your order across cuisines. We’ll coordinate every kitchen for you.</p>
+              </div>
+              <div class="trust-row" aria-label="Service benefits">
+                <span><i data-icon="shield-check"></i> Hygiene first</span>
+                <span><i data-icon="timer"></i> 25 min avg.</span>
+              </div>
+            </div>
+
+            <div class="hero-card">
+              <div class="hero-content">
+                <span class="hero-kicker">Taste passport</span>
+                <h2>Six worlds.<br /><em>One perfect feast.</em></h2>
+                <p>From wok-fired Chinese classics to handmade Japanese sushi—move freely between every kitchen.</p>
+                <button class="button button-dark" data-action="explore-menu">Explore the full menu <span data-icon="arrow-right"></span></button>
+                <div class="hero-proof">
+                  <div class="stacked-avatars"><span>AK</span><span>RM</span><span>VS</span><span>+9</span></div>
+                  <p><strong>12 partner chefs</strong><br />Cooking right now</p>
+                </div>
+              </div>
+              <div class="hero-collage" aria-hidden="true">
+                <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+                <img class="hero-image hero-image-main" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="" />
+                <img class="hero-image hero-image-top" src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=85" alt="" />
+                <img class="hero-image hero-image-bottom" src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=500&q=85" alt="" />
+                <span class="hero-sticker"><strong>900+</strong><small>chef-made dishes</small></span>
+              </div>
+            </div>
+
+            <div class="section-heading">
+              <div><span class="section-kicker">Explore by kitchen</span><h2>Choose a cuisine</h2></div>
+              <button class="text-button" data-action="show-all-cuisines">View all kitchens <span data-icon="arrow-right"></span></button>
+            </div>
+            <div class="cuisine-grid" id="cuisine-grid"></div>
+
+            <div class="menu-section" id="menu-section">
+              <div class="section-heading menu-heading">
+                <div><span class="section-kicker">Made fresh, priced fairly</span><h2>Popular across Foodie Hub</h2></div>
+                <div class="view-controls">
+                  <label class="compact-select"><span data-icon="sliders"></span><select id="sort-menu" aria-label="Sort menu"><option value="popular">Most popular</option><option value="rating">Top rated</option><option value="price-low">Price: low first</option><option value="price-high">Price: high first</option><option value="fast">Fastest prep</option></select></label>
+                </div>
+              </div>
+              <div class="filter-row" id="filter-row">
+                <button class="filter-chip active" data-filter="all">All dishes <span data-icon="grid"></span></button>
+                <button class="filter-chip" data-filter="veg">Vegetarian <span data-icon="leaf"></span></button>
+                <button class="filter-chip" data-filter="spicy">Spicy <span data-icon="flame"></span></button>
+                <button class="filter-chip" data-filter="special">Chef specials <span data-icon="chef"></span></button>
+                <button class="filter-chip" data-filter="under300">Under ₹300 <span data-icon="wallet"></span></button>
+              </div>
+              <div class="filter-row filter-row-compact" id="category-row"></div>
+              <div class="menu-layout">
+                <div>
+                  <div class="menu-grid" id="menu-grid"></div>
+                  <div class="load-more-wrap"><button class="button button-soft" id="load-more">Load more delicious choices</button><p id="menu-result-count"></p></div>
+                </div>
+                <aside class="order-dock" aria-label="Your table order">
+                  <div class="dock-heading">
+                    <div><span class="section-kicker">Your table</span><h3>Order drafts</h3></div>
+                    <span class="table-pill">T-12</span>
+                  </div>
+                  <p class="dock-intro">Items are grouped by the kitchen that will prepare them.</p>
+                  <div id="draft-summary" class="draft-summary"></div>
+                  <div class="dock-total"><span>Estimated total</span><strong id="dock-total">₹0</strong></div>
+                  <button class="button button-primary button-full" id="review-order" data-action="review-order">Review bill & order <span data-icon="arrow-right"></span></button>
+                  <div class="dock-safe"><span data-icon="lock"></span><span>Safe pricing · taxes shown before payment</span></div>
+                </aside>
+              </div>
+            </div>
+          </section>
+
+          <section class="app-view" id="view-sweet-corner" data-view="sweet-corner" aria-labelledby="sweet-corner-title">
+            <div class="view-header">
+              <div>
+                <p class="eyebrow"><span class="pulse-dot"></span> Sweet endings & refreshing sips</p>
+                <h1 id="sweet-corner-title">Sweet Corner</h1>
+                <p class="page-subtitle">Desserts and beverages from every kitchen — perfect to round off your feast.</p>
+              </div>
+              <button class="button button-primary" data-nav="discover">Back to menu <span data-icon="arrow-right"></span></button>
+            </div>
+            <div class="sweet-grid" id="sweet-grid"></div>
+          </section>
+
+          <section class="app-view" id="view-drafts" data-view="drafts" aria-labelledby="drafts-title"></section>
+          <section class="app-view" id="view-orders" data-view="orders" aria-labelledby="orders-title"></section>
+          <section class="app-view" id="view-offers" data-view="offers" aria-labelledby="offers-title"></section>
+          <section class="app-view" id="view-manager" data-view="manager" aria-labelledby="manager-title"></section>
+          <section class="app-view" id="view-safety" data-view="safety" aria-labelledby="safety-title"></section>
+        </main>
+      </div>
+    </div>
+
+    <button class="payment-fab" id="payment-fab" data-action="open-payment" aria-label="Open billing and payment">
+      <span class="payment-fab-icon" data-icon="wallet"></span>
+      <span class="payment-fab-copy"><small>Secure checkout</small><strong>Pay bill</strong></span>
+      <span class="payment-fab-total" id="payment-fab-total">₹0</span>
+    </button>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <button class="active" data-nav="discover"><span data-icon="compass"></span><small>Discover</small></button>
+      <button data-nav="drafts"><span data-icon="bookmark"></span><small>Drafts</small></button>
+      <button data-nav="orders"><span data-icon="receipt"></span><small>Orders</small></button>
+      <button data-nav="offers"><span data-icon="sparkles"></span><small>Offers</small></button>
+      <button data-nav="sweet-corner"><span data-icon="gift"></span><small>Sweets</small></button>
+      <button data-nav="manager"><span data-icon="dashboard"></span><small>Manage</small></button>
+    </nav>
+
+    <div class="sidebar-scrim" data-action="close-sidebar"></div>
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+    <dialog class="app-dialog" id="bill-dialog" aria-labelledby="bill-title">
+      <div class="dialog-shell bill-dialog-shell">
+        <button class="dialog-close icon-button" data-action="close-dialog" aria-label="Close bill"><span data-icon="x"></span></button>
+        <div id="bill-dialog-content"></div>
+      </div>
+    </dialog>
+
+    <dialog class="app-dialog" id="order-dialog" aria-labelledby="order-title">
+      <div class="dialog-shell compact-dialog-shell">
+        <button class="dialog-close icon-button" data-action="close-dialog" aria-label="Close order status"><span data-icon="x"></span></button>
+        <div id="order-dialog-content"></div>
+      </div>
+    </dialog>
+
+    <dialog class="app-dialog" id="payment-dialog" aria-labelledby="payment-title">
+      <div class="dialog-shell payment-dialog-shell">
+        <button class="dialog-close icon-button" data-action="close-dialog" aria-label="Close payment"><span data-icon="x"></span></button>
+        <div id="payment-dialog-content"></div>
+      </div>
+    </dialog>
+
+    <dialog class="app-dialog" id="quick-dialog" aria-labelledby="quick-title">
+      <div class="dialog-shell compact-dialog-shell">
+        <button class="dialog-close icon-button" data-action="close-dialog" aria-label="Close dialog"><span data-icon="x"></span></button>
+        <div id="quick-dialog-content"></div>
+      </div>
+    </dialog>
+
+    <dialog class="app-dialog" id="dish-dialog" aria-labelledby="dish-title">
+      <div class="dialog-shell dish-dialog-shell">
+        <button class="dialog-close icon-button" data-action="close-dialog" aria-label="Close dish details"><span data-icon="x"></span></button>
+        <div id="dish-dialog-content"></div>
+      </div>
+    </dialog>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

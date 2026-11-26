@@ -1,0 +1,17 @@
+{
+  "name": "Foodie Hub",
+  "short_name": "Foodie Hub",
+  "description": "Six cuisines, one beautiful order.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f4ef",
+  "theme_color": "#ff5a2a",
+  "icons": [
+    {
+      "src": "./assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

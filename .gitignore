@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local dev server
+*.pyc
+__pycache__/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Netlify cache
+.netlify/
+.cache/

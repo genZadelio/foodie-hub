@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Foodie Hub — CSS Aggregator
+   ==========================================================================
+   Styles are split into separate sheets for maintainability.
+   Each sheet is imported below in load order.
+   ========================================================================== */
+
+/* 1. Design tokens, reset, typography, app shell, sidebar, icons */
+@import url('./css/base.css');
+
+/* 2. Layout: topbar, search, menu grid, order dock, mobile nav, toast */
+@import url('./css/layout.css');
+
+/* 3. Components: dialogs, buttons, orders, manager, offers, print */
+@import url('./css/components.css');
+
+/* 4. Features: favourites, dish detail, category chips, table switching */
+@import url('./css/features.css');
+
+/* 5. Sweet Corner: desserts & beverages dedicated section */
+@import url('./css/sweet-corner.css');
